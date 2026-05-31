@@ -120,7 +120,7 @@ section h3 {
   font-weight: 500;
 }
 
-.participant-delete-btn {
+button.participant-delete-btn {
   width: 26px;
   height: 26px;
   border-radius: 999px;
@@ -135,13 +135,13 @@ section h3 {
   padding: 0;
 }
 
-.participant-delete-btn:hover {
+button.participant-delete-btn:hover {
   transform: translateY(-1px);
   background-color: #ffe3eb;
   border-color: #d36485;
 }
 
-.participant-delete-btn:disabled {
+button.participant-delete-btn:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }

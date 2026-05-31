@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showMessage(type, text) {
     messageDiv.textContent = text;
-    messageDiv.className = type;
+    messageDiv.className = `message ${type}`;
     messageDiv.classList.remove("hidden");
 
     setTimeout(() => {
@@ -177,7 +177,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     deleteButton.disabled = true;
-    await unregisterParticipant(activityName, email);
+    try {
+      await unregisterParticipant(activityName, email);
+    } finally {
+      deleteButton.disabled = false;
+    }
   });
 
   // Initialize app
